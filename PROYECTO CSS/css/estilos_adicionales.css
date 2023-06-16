@@ -1,0 +1,549 @@
+/***********************************************
+
+ Autores: Libertini Marco - Abrati Daniel
+
+***********************************************/
+
+/* ORGANIZAR LAS DECLARACIONES EN BLOQUES*/
+
+/* ESTILOS GENERALES*/
+
+/* PALETA DE COLORES EN DECLARACION DE VARIABLES */
+:root {
+    --color1: #FFCE2B ;
+    --color2: black ;  
+    --color3: #B2AFAC  ;  
+    --color4: #959492  ;  
+}
+
+/*EFECTO DE TINTINEAR LA CAMPANITA*/
+@keyframes tintineo {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-5px);
+    }
+    40% {
+      transform: translateX(5px);
+    }
+    60% {
+      transform: translateX(-5px);
+    }
+    80% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+/*EFECTO DE CARGA DE MONEDITAS EN COTIZACION DOLAR*/
+@keyframes Moneditas {
+    0% {
+      transform: scale(1) rotate(0deg);
+      background-color: var(--color1);
+    }
+    50% {
+      transform: scale(1.5) rotate(180deg);
+      background-color: var(--color4);
+    }
+    100% {
+      transform: scale(1) rotate(360deg);
+      background-color: var(--color2);
+    }
+}
+
+
+/*Se responde al ultimo INCISO DEL ENUNCIADO*/
+body{
+    background: linear-gradient(var(--color2), var(--color4));
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ---------- ESTILOS DE CABECERA PRINCIPAL*/
+.main-header{
+    background-color: var(--color2);
+    display: flex; /*Lo hago flexible*/
+    justify-content: space-evenly; /*Espacio entre elementos*/
+    padding: 10px;
+    align-items: center; /*centro verticalmente*/
+  
+}
+
+/*IMAGEN DEL HEADER*/
+.main-header img{
+    height: 70%;
+    order: -1; /*Posiciono la imagen al comienzo*/
+    
+}
+
+/*SE UTILIZA EFECTO DE TRANSICION Y TRANSFORMACION*/
+.main-header img:hover{
+    order: -1; /*Posiciono la imagen al comienzo*/
+    transform: scale(1.2) rotate(360deg);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/*H1 DEL HEADER*/
+.main-header h1{
+    color: var(--color1);
+    font-size: 50px;
+}
+
+/*CAMPANITA*/
+.main-header .material-icons-outlined{
+    color: var(--color1);
+}
+/*APLICO EL TINTINEO*/
+.main-header .material-icons-outlined:hover{
+    animation: tintineo 0.5s infinite;
+    color: var(--color3);
+    cursor: pointer;
+}
+
+/*NROS NOTIFICACIONES*/
+.main-header .notification-counter{
+    color: var(--color1);
+}
+
+
+/* ---------- ESTILOS DE BARRA DE NAVEGACIÓN */
+.main-menu{
+    background-color: var(--color2);   
+    overflow-y: hidden; /*ESCONDO AMBOS SCROLLS*/
+    overflow-y: hidden;
+    /*Disculpe por una cuestion estetica esconder el scroll pero no lo elimine*/
+    justify-content: center;
+    align-items: flex-start; /*Posiciono al comienzo*/
+    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row; /*EN FILA*/
+    flex-wrap: wrap; /*QUE BAJE DE LINEA*/
+    width: 100%; /*que ocupe el ancho*/
+
+}
+
+/*COLOR DE LOS H2 DEL HEADER*/
+.main-menu h2{
+    color: var(--color1);
+}
+
+
+/*PREPARACION DE LOS GRUPOS*/
+.main-menu .menu-group{
+    display: flex;  /*Flexibilizacion de elementos*/
+    flex-direction: column; /*en formato de columna*/
+    justify-content: center;
+    padding: 5px; /*Separo elementos*/
+    text-align: center;
+
+}
+
+/* EDICION DE ANCHORS*/
+.main-menu a{
+    display: flex; /*flexibilizo el contenido*/
+    padding: 5px; /*Separo */
+    font-size: large; /*tama;o general de la font*/
+    color: var(--color4);
+    text-decoration: none; /*Elimino subrayado*/
+    
+}
+
+/*TRANSICION PARA DISIMULAR DIFUMINACION*/
+.main-menu a:hover{
+    color: var(--color1);
+    cursor: pointer; /*Puntero manito*/
+    transition: color 0.5s ease-in-out;
+}
+
+/*ICONOS DEL MENU-GROUP*/
+.menu-group .material-icons{
+    color: var(--color1);
+    text-decoration: none; /*SACAMOS EL SUBRAYADO DE LOS ICONOS*/
+}
+
+/*ESPACIO DE SPAN*/
+.menu-group a > span{
+    padding-left: 10px; /*Separo */
+}
+
+/* CONTENEDOR CENTRAL */
+
+main section{
+    padding: 15px; /*Separacion del main principal*/
+}
+
+/*COLOR DEL h2*/
+main section>h2{
+    color: var(--color1);
+    justify-content: center;
+}
+
+/* PLANTILLA DE PRODUCTOS */
+/* SE UTILIZA MODELO FLEXBOX */
+.exclusive-offers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+/*H2 DE OFERTAS EXXCLUSIVAS*/
+.exclusive-offers >h2{
+    display: flex;
+    font-size: 30px;
+    padding-bottom: 10px;
+    
+}
+
+/* PLANTILLA DE PRODUCTOS */
+/* ELEMENTOS OFERTAS EXCLUSIVAS PARA TI*/
+.art-offer{
+    background-color: var(--color3);
+    border-radius: 10px;
+    flex-basis: 100%; /* Asegura que cada artículo ocupe todo el ancho del contenedor */
+    margin-bottom: 20px; /* Agrega espacio entre los artículos */
+
+}
+/*UNA MINIMA SEPARACION*/
+.art-offer header{
+    top: 1px;
+    padding: 10px;
+}
+
+/*EN NEGRITA*/
+.art-offer header h3{
+    font-weight: bold;
+}
+
+/*COLORES DE EL HEADER*/
+.art-offer header p{
+    font-weight: bold;
+    color: var(--color1);
+    background-color: var(--color2);
+    white-space: nowrap; /* Evita que el texto se desborde */
+    overflow: hidden; /*Si el contenido se excede se esconde*/
+    text-overflow: ellipsis; /* Agrego puntos suspensivos cuando el texto se desborda */
+    font-size: 20px;
+    display: inline-block; /* Cambio la propiedad display asi puedo  establecer un ancho y un alto fijo*/
+    padding: 5px 10px; /* Ajusta el espacio del fondo */
+
+}
+
+
+/* IMAGENES DE ARTICULOS */
+.art-offer img{
+    float: right; /*Que flote a la derecha*/
+    max-width: 200px; /*Despues de probar, que este sea el tama;o maximo que ocupe*/
+    padding: 5px;
+    margin-top: -40px; /*Fuerzo el desplazo*/
+    height: auto; /*Que se acomode el alto automatico a su lugar*/
+    transition: transform 0.3s; /*Agrego una transicion*/
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.art-offer img:hover{
+    transform: scale(1.2) /*Aumento la imagen en 120%*/
+}
+
+
+/*UTILIZACION DE PSEUDO ELEMENTO Y ATRIBUTO PERSONALIZADO*/
+/*PARA AGREGAR PROMOCION Y ANTIGUO PRECIO GUARDADO EN ATRIBUTO DATA*/
+.art-offer header p[data-art-old-price]::before {
+    content: "EN PROMO!: ";
+    font-weight: bold;
+}
+
+.art-offer header p[data-art-old-price]::after {
+    content: "Antes: $" attr(data-art-old-price);
+    color: red;
+    text-decoration: line-through;
+}
+
+/*H4*/
+.art-details h4 {
+    font-weight: bold;
+    color: var(--color1);
+    font-size: 25px;
+}
+/*H3*/
+.art-offer header h3 {
+    font-weight: bold;
+    color: var(--color2);
+    font-size: 30px;
+
+}
+
+/*FONDO*/
+.art-details{
+    background-color: var(--color4);
+}
+/*INFORMACION*/
+.art-details p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/*ORDEN DEL FOOTER*/
+.art-offer footer {
+    bottom: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*PARRAFO DEL FOOTER*/
+.art-offer footer p{
+    font-size: large;
+    font-weight: bold;
+}
+
+
+/*COLORES DEL BOTON*/
+.art-offer footer > button {
+    color: var(--color1);
+    background-color: var(--color2);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*ACTIVIDAD RECIENTE*/
+.activity {
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+/*LA TABLA*/
+.activity > table{
+    margin-top: 10px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    border-collapse: collapse; /*Que se peguen*/
+}
+
+/*LAS CABECERAS*/
+.activity table thead th{
+    font-weight: bold;
+}
+
+/*BOTONES*/
+.activity button {
+    background-color: var(--color2);
+    color: var(--color1);
+    cursor: pointer;
+}
+
+/*ESTILOS TABLA*/
+.activity table th,
+.activity table td {
+    border: 1px solid var(--color2);
+    text-align: center;
+    padding: 5px;
+    background-color: var(--color3);
+}
+
+/*EFECTO DE TABLA*/
+.activity table tr:hover {
+    background-color: var(--color2);
+    color: var(--color1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* CONTROL DE STOCK */
+.stock-control{
+    display: flex; /*Flexibilizo hijos*/
+    justify-content: space-between; /*Las espacio*/
+    align-items: flex-end; /*Que se posiciones al comienzo*/
+    flex-grow: 2; /*Que ocupe el doble de espacios*/
+    text-align: center;
+    padding: 10px;
+    border: solid;
+}
+
+
+/*UTILIZACION DE PSEUDO ELEMENTOS Y ATRIBUTOS PERSONALIZADOS*/
+.stock-alert::after {
+    content: attr(data-stock);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+/*SE INTERPRETO EL DATA STOCK DE MENOR STOCK A MAYOR STOCK*/  
+.stock-alert[data-stock="0"]::after {
+    content: "Agotado";
+}
+  
+.stock-alert[data-stock="3"]::after {
+    content: "Stock limitado";
+}
+  
+.stock-alert[data-stock="8"]::after {
+    content: "Disponible";
+}
+
+/*SE INTERPRETO EL DATA ALERT 
+COMO QUE SI ES ALTO: ES EL QUE
+ TIENE MAYOR PRIORIDAD A LA HORA DE REPONERSE*/
+
+.stock-alert[data-alert-level="high"] {
+    background-color: var(--color1);
+    height: 100%;
+    padding: 3px;
+}
+  
+.stock-alert[data-alert-level="medium"] {
+    background-color: var(--color2);
+    height: 75%;
+    padding: 3px;
+    color: var(--color3);
+}
+  
+.stock-alert[data-alert-level="low"] {
+    background-color: var(--color3); 
+    height: 50%;
+    padding: 3px;
+}
+
+.stock-alert{
+    width: 100%;
+    height: 60px;
+}
+
+/* COTIZACION DOLAR */
+
+/*LAS MONEDITAS*/
+.loading-item{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+/*Formateo lo p ocultos*/
+.currency>p{
+    display: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/*UTILIZACION DE POSITION 
+EN LA SECCION DE COTIZACION DE DOLAR*/
+.currency {
+    position: relative; /*Posición relativa para el contenedor */
+}
+
+.loading {
+    position: absolute; /* Establece la posición absoluta para el elemento */
+    top: 50%; /* centro verticalmente */
+    left: 50%; /* centro horizontalmente */
+    transform: translate(-50%, -50%); /* en el centro */
+}
+
+.loading-item {
+    width: 20px;
+    height: 20px;
+    background-color: var(--color2);
+    margin-bottom: 10px;
+}
+
+
+/*Muestro los hermanos generales p de loading*/
+/*Para que se vean los p ocultos*/
+.currency .loading:hover ~ p {
+    display: block;
+}
+
+
+/* FOOTER */
+.main-footer{
+    background-color: var(--color2);
+    color: var(--color1);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/*ELEMENTO DE AYUDA EN LINEA - FIJADO*/
+.contact-support {
+    display: flex; /*Asi despues puedo alinear el icono*/
+    position: fixed; /*Lo fijo para que se vea en todo el recorrido*/
+    bottom: 280px; /* Ajusto la posición */
+    right: 20px; /* Ajusto la posición */
+    background-color: var(--color1);
+    padding: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.contact-text{
+    padding-left: 10px;
+}
+
+
+/*SEPARO EL TITULO DE LAS TARJETAS Y UN POQUITO DEL BORDE*/
+.cards h2{
+    margin: -15px;
+    margin-left: 3px;
+}
+
+
+/* ESTILOS DE ...*/
+
+
+/*EFECTO DE TARJETAS */
+/*PARA QUE SE ELEVEN Y PASEN AL FRENTE*/
+.card{
+    background-color: var(--color2);
+    border: 1px solid var(--color1);
+    color: var(--color3);
+    padding: 10px;
+    transition: z-index 0.6s;
+    transition: transform 0.3s;
+}
+
+/*EFECTO CARTAS HOVER*/
+.card:hover {
+    transform: translateY(-10px); 
+    z-index: 1;
+    cursor: pointer;
+}
+
+/*MODIFICACION GRUPAL DE NEGRITA*/
+.card h3,
+.card p {
+  font-weight: bold;
+}
+
+
+/*EFECTO LOADING EN COTIZACION DEL DOLAR*/
+
+/*APLICO EL EFECTO DE LAS MONEDITAS*/
+.loading-item {
+    width: 30px;
+    height: 30px;
+    border-radius: 500%;
+    margin: 1 5px;
+    animation: Moneditas 1.5s infinite ease-in-out;
+}
+
+
+/*SEGUNDA MONEDA*/
+.loading-item:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+/*TERCERA MONEDA*/
+.loading-item:nth-child(3) {
+    animation-delay: 1s;
+}
+  
+
+
+
