@@ -1,0 +1,11 @@
+C:\Users\enmiv\OneDrive\Documents\mrk\Visual Studio 2022\Proyecto 2 Tema 1\Proyecto 2 Tema 1\obj\Debug\Proyecto 2 Tema 1.csproj.AssemblyReference.cache
+C:\Users\enmiv\OneDrive\Documents\mrk\Visual Studio 2022\Proyecto 2 Tema 1\Proyecto 2 Tema 1\obj\Debug\Proyecto 2 Tema 1.csproj.SuggestedBindingRedirects.cache
+C:\Users\enmiv\OneDrive\Documents\mrk\Visual Studio 2022\Proyecto 2 Tema 1\Proyecto 2 Tema 1\obj\Debug\Proyecto_2_Tema_1.Form1.resources
+C:\Users\enmiv\OneDrive\Documents\mrk\Visual Studio 2022\Proyecto 2 Tema 1\Proyecto 2 Tema 1\obj\Debug\Proyecto_2_Tema_1.Properties.Resources.resources
+C:\Users\enmiv\OneDrive\Documents\mrk\Visual Studio 2022\Proyecto 2 Tema 1\Proyecto 2 Tema 1\obj\Debug\Proyecto 2 Tema 1.csproj.GenerateResource.cache
+C:\Users\enmiv\OneDrive\Documents\mrk\Visual Studio 2022\Proyecto 2 Tema 1\Proyecto 2 Tema 1\obj\Debug\Proyecto 2 Tema 1.csproj.CoreCompileInputs.cache
+C:\Users\enmiv\OneDrive\Documents\mrk\Visual Studio 2022\Proyecto 2 Tema 1\Proyecto 2 Tema 1\bin\Debug\Proyecto 2 Tema 1.exe.config
+C:\Users\enmiv\OneDrive\Documents\mrk\Visual Studio 2022\Proyecto 2 Tema 1\Proyecto 2 Tema 1\bin\Debug\Proyecto 2 Tema 1.exe
+C:\Users\enmiv\OneDrive\Documents\mrk\Visual Studio 2022\Proyecto 2 Tema 1\Proyecto 2 Tema 1\bin\Debug\Proyecto 2 Tema 1.pdb
+C:\Users\enmiv\OneDrive\Documents\mrk\Visual Studio 2022\Proyecto 2 Tema 1\Proyecto 2 Tema 1\obj\Debug\Proyecto 2 Tema 1.exe
+C:\Users\enmiv\OneDrive\Documents\mrk\Visual Studio 2022\Proyecto 2 Tema 1\Proyecto 2 Tema 1\obj\Debug\Proyecto 2 Tema 1.pdb
